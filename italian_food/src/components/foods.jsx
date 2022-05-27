@@ -7,83 +7,18 @@ import pizza from '../../images/pizza.jpg'
 import salada from '../../images/salada.jpg'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+import { useState } from 'react'
 
 const Foods = () => {
-    function ToggleButtonExample() {
-        const [checked, setChecked] = useState(false);
-        const [radioValue, setRadioValue] = useState('1');
-      
-        const radios = [
-          { name: 'Active', value: '1' },
-          { name: 'Radio', value: '2' },
-          { name: 'Radio', value: '3' },
-        ];
-      
-        return (
-          <>
-            <ButtonGroup className="mb-2">
-              <ToggleButton
-                id="toggle-check"
-                type="checkbox"
-                variant="secondary"
-                checked={checked}
-                value="1"
-                onChange={(e) => setChecked(e.currentTarget.checked)}
-              >
-                Checked
-              </ToggleButton>
-            </ButtonGroup>
-            <br />
-            <ButtonGroup className="mb-2">
-              {radios.map((radio, idx) => (
-                <ToggleButton
-                  key={idx}
-                  id={`radio-${idx}`}
-                  type="radio"
-                  variant="secondary"
-                  name="radio"
-                  value={radio.value}
-                  checked={radioValue === radio.value}
-                  onChange={(e) => setRadioValue(e.currentTarget.value)}
-                >
-                  {radio.name}
-                </ToggleButton>
-              ))}
-            </ButtonGroup>
-            <br />
-            <ToggleButton
-              className="mb-2"
-              id="toggle-check"
-              type="checkbox"
-              variant="outline-primary"
-              checked={checked}
-              value="1"
-              onChange={(e) => setChecked(e.currentTarget.checked)}
-            >
-              Checked
-            </ToggleButton>
-            <br />
-            <ButtonGroup>
-              {radios.map((radio, idx) => (
-                <ToggleButton
-                  key={idx}
-                  id={`radio-${idx}`}
-                  type="radio"
-                  variant={idx % 2 ? 'outline-success' : 'outline-danger'}
-                  name="radio"
-                  value={radio.value}
-                  checked={radioValue === radio.value}
-                  onChange={(e) => setRadioValue(e.currentTarget.value)}
-                >
-                  {radio.name}
-                </ToggleButton>
-              ))}
-            </ButtonGroup>
-          </>
-        );
-      }
-      
-      render(<ToggleButtonExample />);
+
+    const [radioMassa, setRadioMassa]= useState(false)
+    const [radioCouvert, setRadioCouvert]= useState(false)
+    const [radioBolinho, setRadioBolinho]= useState(false)
+    const [radioMacarrao, setRadioMacarrao]= useState(false)
+    const [radioMistura, setRadioMistura]= useState(false)
+    const [radioPizza, setRadioPizza]= useState(false)
+    const [radioSalada, setRadioSalada]= useState(false)
+
     return (
         <div className='flex'>
             <Card style={{ width: '18rem' }}>
@@ -94,7 +29,19 @@ const Foods = () => {
                     Some quick example text to build on the card title and make up the bulk of
                     the card's content.
                     </Card.Text>
-                    <Button variant="outline-primary">Go somewhere</Button>
+                    <Button 
+                        variant="outline-primary" 
+                        active = {radioMassa}
+                        onClick={()=>setRadioMassa(!radioMassa)}
+                    >
+                        {
+                        !radioMassa 
+                        ?
+                        <span>Put in cart</span>
+                        :
+                        <span>selected product</span>
+                        }
+                    </Button>
                 </Card.Body>
             </Card>
             <Card style={{ width: '18rem' }}>
@@ -105,7 +52,19 @@ const Foods = () => {
                     Some quick example text to build on the card title and make up the bulk of
                     the card's content.
                     </Card.Text>
-                    <Button variant="outline-primary">Go somewhere</Button>
+                    <Button 
+                        variant="outline-primary"
+                        active = {radioCouvert} 
+                        onClick={()=>setRadioCouvert(!radioCouvert)}
+                    >
+                        {
+                        !radioCouvert 
+                        ?
+                        <span>Put in cart</span>
+                        :
+                        <span>selected product</span>
+                        }
+                    </Button>
                 </Card.Body>
             </Card>
             <Card style={{ width: '18rem' }}>
@@ -116,7 +75,19 @@ const Foods = () => {
                     Some quick example text to build on the card title and make up the bulk of
                     the card's content.
                     </Card.Text>
-                    <Button variant="outline-primary">Go somewhere</Button>
+                    <Button 
+                        variant="outline-primary"
+                        active = {radioBolinho} 
+                        onClick={()=>setRadioBolinho(!radioBolinho)}
+                    >
+                        {
+                        !radioBolinho 
+                        ?
+                        <span>Put in cart</span>
+                        :
+                        <span>selected product</span>
+                        }
+                    </Button>
                 </Card.Body>
             </Card>
             <Card style={{ width: '18rem' }}>
@@ -127,7 +98,19 @@ const Foods = () => {
                     Some quick example text to build on the card title and make up the bulk of
                     the card's content.
                     </Card.Text>
-                    <Button variant="outline-primary">Go somewhere</Button>
+                    <Button 
+                        variant="outline-primary" 
+                        active = {radioMacarrao}
+                        onClick={()=>setRadioMacarrao(!radioMacarrao)}
+                    >
+                        {
+                        !radioMacarrao 
+                        ?
+                        <span>Put in cart</span>
+                        :
+                        <span>selected product</span>
+                        }
+                    </Button>
                 </Card.Body>
             </Card>
             <Card style={{ width: '18rem' }}>
@@ -138,7 +121,19 @@ const Foods = () => {
                     Some quick example text to build on the card title and make up the bulk of
                     the card's content.
                     </Card.Text>
-                    <Button variant="outline-primary">Go somewhere</Button>
+                    <Button 
+                        variant="outline-primary" 
+                        active = {radioMistura}
+                        onClick={()=>setRadioMistura(!radioMistura)}
+                    >
+                        {
+                        !radioMistura 
+                        ?
+                        <span>Put in cart</span>
+                        :
+                        <span>selected product</span>
+                        }
+                    </Button>
                 </Card.Body>
             </Card>
             <Card style={{ width: '18rem' }}>
@@ -149,7 +144,19 @@ const Foods = () => {
                     Some quick example text to build on the card title and make up the bulk of
                     the card's content.
                     </Card.Text>
-                    <Button variant="outline-primary">Go somewhere</Button>
+                    <Button 
+                        variant="outline-primary"
+                        active = {radioPizza} 
+                        onClick={()=>setRadioPizza(!radioPizza)}
+                    >
+                        {
+                        !radioPizza 
+                        ?
+                        <span>Put in cart</span>
+                        :
+                        <span>selected product</span>
+                        }
+                    </Button>
                 </Card.Body>
             </Card>
            <Card style={{ width: '18rem' }}>
@@ -160,7 +167,19 @@ const Foods = () => {
                     Some quick example text to build on the card title and make up the bulk of
                     the card's content.
                     </Card.Text>
-                    <Button variant="outline-primary">Go somewhere</Button>
+                    <Button 
+                        variant="outline-primary"
+                        active = {radioSalada} 
+                        onClick={()=>setRadioSalada(!radioSalada)}
+                    >
+                        {
+                        !radioSalada 
+                        ?
+                        <span>Put in cart</span>
+                        :
+                        <span>selected product</span>
+                        }
+                    </Button>
                 </Card.Body>
             </Card>
             
