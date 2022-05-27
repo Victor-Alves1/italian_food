@@ -1,9 +1,8 @@
-import { useState } from 'react'
 import Header from './components/Header'
 import Foods from './components/foods'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const [count, setCount] = useState(0)
   // #FFCF43 e #01ADFF
   return (
     <div className="App">
