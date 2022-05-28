@@ -1,3 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root{
+    --color1: #FFCF43;
+    --color2: #01ADFF;
+}
+*{
+    margin: 0;
+    padding: 0
+}
+body{
+    overflow-x: hidden;
+}
+.header{
+    background-color: var(--color2);
+}
+.Carousel-card{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    z-index: 100;
+}

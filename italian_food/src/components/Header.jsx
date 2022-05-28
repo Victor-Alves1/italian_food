@@ -1,22 +1,26 @@
 import logo from '../../images/logo.svg'
-import cart from '../../images/cart.svg'
+
+import Cart from './Cart'
+
 
 const Header = () => {
+    
     return (
-        <div className='flex justify-between align-middle bg-amarelo'>
-            <div className='flex gap-3'>
-                <img src={logo} alt="" className='p-2 bg-azul'/>
-                <h1 className='text-4xl italic leading-normal '>Cibo italiano</h1>
+        <div className='header d-flex justify-content-between align-items-center'>
+            <div className='d-flex gap-3'>
+                <img src={logo} alt="" className=''/>
+                <h1 className=''>Cibo italiano</h1>
             </div>
-            <div className='flex gap-8 content-center'>
-                <span className='w-full my-auto'>
+            <div className='d-flex gap-8 justifify-content-center'>
+                <span className='w-100 my-auto'>
                     Cadastre-se
                 </span>
-                <span className='whitespace-nowrap my-auto '>
+                <span className='w-100 my-auto me-4'>
                     Acesse sua conta
                 </span>
-                <img src={cart} alt="" className='full'/>
+                <Cart className=""/>
             </div>
+            
         </div>
     );
 }

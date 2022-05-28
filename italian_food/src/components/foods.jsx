@@ -5,8 +5,12 @@ import macarrao from '../../images/macarrao.jpg'
 import mistura from '../../images/mistura.jpg'
 import pizza from '../../images/pizza.jpg'
 import salada from '../../images/salada.jpg'
+import meat from '../../images/meat.jpg'
+
+import Carousel from 'react-bootstrap/Carousel'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+
 import { useState } from 'react'
 
 const Foods = () => {
@@ -18,279 +22,203 @@ const Foods = () => {
     const [radioMistura, setRadioMistura]= useState(false)
     const [radioPizza, setRadioPizza]= useState(false)
     const [radioSalada, setRadioSalada]= useState(false)
+    const [radioMeat, setRadioMeat]= useState(false)
+
 
     return (
-        <div className='flex'>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={massa} />
-                <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
-                    </Card.Text>
-                    <Button 
-                        variant="outline-primary" 
-                        active = {radioMassa}
-                        onClick={()=>setRadioMassa(!radioMassa)}
-                    >
-                        {
-                        !radioMassa 
-                        ?
-                        <span>Put in cart</span>
-                        :
-                        <span>selected product</span>
-                        }
-                    </Button>
-                </Card.Body>
-            </Card>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={couvert} />
-                <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
-                    </Card.Text>
-                    <Button 
-                        variant="outline-primary"
-                        active = {radioCouvert} 
-                        onClick={()=>setRadioCouvert(!radioCouvert)}
-                    >
-                        {
-                        !radioCouvert 
-                        ?
-                        <span>Put in cart</span>
-                        :
-                        <span>selected product</span>
-                        }
-                    </Button>
-                </Card.Body>
-            </Card>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={bolinho} />
-                <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
-                    </Card.Text>
-                    <Button 
-                        variant="outline-primary"
-                        active = {radioBolinho} 
-                        onClick={()=>setRadioBolinho(!radioBolinho)}
-                    >
-                        {
-                        !radioBolinho 
-                        ?
-                        <span>Put in cart</span>
-                        :
-                        <span>selected product</span>
-                        }
-                    </Button>
-                </Card.Body>
-            </Card>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={macarrao} />
-                <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
-                    </Card.Text>
-                    <Button 
-                        variant="outline-primary" 
-                        active = {radioMacarrao}
-                        onClick={()=>setRadioMacarrao(!radioMacarrao)}
-                    >
-                        {
-                        !radioMacarrao 
-                        ?
-                        <span>Put in cart</span>
-                        :
-                        <span>selected product</span>
-                        }
-                    </Button>
-                </Card.Body>
-            </Card>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={mistura} />
-                <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
-                    </Card.Text>
-                    <Button 
-                        variant="outline-primary" 
-                        active = {radioMistura}
-                        onClick={()=>setRadioMistura(!radioMistura)}
-                    >
-                        {
-                        !radioMistura 
-                        ?
-                        <span>Put in cart</span>
-                        :
-                        <span>selected product</span>
-                        }
-                    </Button>
-                </Card.Body>
-            </Card>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={pizza} />
-                <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
-                    </Card.Text>
-                    <Button 
-                        variant="outline-primary"
-                        active = {radioPizza} 
-                        onClick={()=>setRadioPizza(!radioPizza)}
-                    >
-                        {
-                        !radioPizza 
-                        ?
-                        <span>Put in cart</span>
-                        :
-                        <span>selected product</span>
-                        }
-                    </Button>
-                </Card.Body>
-            </Card>
-           <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={salada} />
-                <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
-                    </Card.Text>
-                    <Button 
-                        variant="outline-primary"
-                        active = {radioSalada} 
-                        onClick={()=>setRadioSalada(!radioSalada)}
-                    >
-                        {
-                        !radioSalada 
-                        ?
-                        <span>Put in cart</span>
-                        :
-                        <span>selected product</span>
-                        }
-                    </Button>
-                </Card.Body>
-            </Card>
-            
-            {/* <div className='radios-input'>
-                <input type="radio" name="info-comida" id="menu1" />
-                <input type="radio" name="info-comida" id="menu2" />
-                <input type="radio" name="info-comida" id="menu3" />
-                <input type="radio" name="info-comida" id="menu4" />
-                <input type="radio" name="info-comida" id="menu5" />
-                <input type="radio" name="info-comida" id="menu6" />
-                <input type="radio" name="info-comida" id="menu7" />
-            </div>
+        <div className='carousel d-flex' >
+            <Carousel variant='dark' indicators={false}>
+                <Carousel.Item>
+                    
+                    <div className='Carousel-card'>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={massa} />
+                            <Card.Body>
+                                <Card.Title>Lorem ipsum dolor</Card.Title>
+                                <Card.Text>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi rem officia at alias labore, magnam voluptatum mollitia temporibus odio laboriosam modi eum architecto soluta perferendis et ex odit ducimus distinctio?
+                                </Card.Text>
+                                <Button
+                                    variant="outline-primary"
+                                    active = {radioMassa}
+                                    onClick={()=>setRadioMassa(!radioMassa)}
+                                >
+                                    {
+                                    !radioMassa
+                                    ?
+                                    <span>Put in cart</span>
+                                    :
+                                    <span>selected product</span>
+                                    }
+                                </Button>
+                            </Card.Body>
+                        </Card>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={couvert} />
+                            <Card.Body>
+                                <Card.Title>Lorem ipsum dolor</Card.Title>
+                                <Card.Text>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius voluptatibus fuga commodi pariatur soluta, nam architecto ea omnis inventore molestiae, exercitationem iure numquam veritatis et repudiandae distinctio tempore porro placeat.
+                                </Card.Text>
+                                <Button
+                                    variant="outline-primary"
+                                    active = {radioCouvert}
+                                    onClick={()=>setRadioCouvert(!radioCouvert)}
+                                >
+                                    {
+                                    !radioCouvert
+                                    ?
+                                    <span>Put in cart</span>
+                                    :
+                                    <span>selected product</span>
+                                    }
+                                </Button>
+                            </Card.Body>
+                        </Card>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={bolinho} />
+                            <Card.Body>
+                                <Card.Title>Lorem ipsum dolor</Card.Title>
+                                <Card.Text>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ad, quibusdam, pariatur omnis illo reiciendis ab excepturi fuga ea quam aliquid quo nobis id neque recusandae nesciunt, aliquam autem sit?
+                                </Card.Text>
+                                <Button
+                                    variant="outline-primary"
+                                    active = {radioBolinho}
+                                    onClick={()=>setRadioBolinho(!radioBolinho)}
+                                >
+                                    {
+                                    !radioBolinho
+                                    ?
+                                    <span>Put in cart</span>
+                                    :
+                                    <span>selected product</span>
+                                    }
+                                </Button>
+                            </Card.Body>
+                        </Card>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={macarrao} />
+                            <Card.Body>
+                                <Card.Title>Lorem ipsum dolor</Card.Title>
+                                <Card.Text>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, maiores placeat facere doloribus officia fugit ut explicabo non ipsa consequatur, voluptates minus nulla asperiores, delectus cum et suscipit. Rem, facere!
+                                </Card.Text>
+                                <Button
+                                    variant="outline-primary"
+                                    active = {radioMacarrao}
+                                    onClick={()=>setRadioMacarrao(!radioMacarrao)}
+                                >
+                                    {
+                                    !radioMacarrao
+                                    ?
+                                    <span>Put in cart</span>
+                                    :
+                                    <span>selected product</span>
+                                    }
+                                </Button>
+                            </Card.Body>
+                        </Card>
+                    </div>
+                </Carousel.Item>
 
-            <label htmlFor="menu1">
-                <div className='w-comida'>
-                    <img src={massa} alt="" />
-                    <div className='info-comida'>
-                        <h1>
-                            Lorem ipsum
-                        </h1>
-                        <br />
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, pariatur eveniet accusamus facilis eaque amet accusantium mollitia perferendis! Molestiae ipsum sunt dicta tempore natus aliquam obcaecati, ullam temporibus eaque recusandae.
-                        </p>
+                <Carousel.Item >
+
+                    <div className='Carousel-card'>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={mistura} />
+                            <Card.Body>
+                                <Card.Title>Lorem ipsum dolor</Card.Title>
+                                <Card.Text>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi rem officia at alias labore, magnam voluptatum mollitia temporibus odio laboriosam modi eum architecto soluta perferendis et ex odit ducimus distinctio?
+                                </Card.Text>
+                                <Button
+                                    variant="outline-primary"
+                                    active = {radioMistura}
+                                    onClick={()=>setRadioMistura(!radioMistura)}
+                                >
+                                    {
+                                    !radioMistura
+                                    ?
+                                    <span>Put in cart</span>
+                                    :
+                                    <span>selected product</span>
+                                    }
+                                </Button>
+                            </Card.Body>
+                        </Card>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={pizza} />
+                            <Card.Body>
+                                <Card.Title>Lorem ipsum dolor</Card.Title>
+                                <Card.Text>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius voluptatibus fuga commodi pariatur soluta, nam architecto ea omnis inventore molestiae, exercitationem iure numquam veritatis et repudiandae distinctio tempore porro placeat.
+                                </Card.Text>
+                                <Button
+                                    variant="outline-primary"
+                                    active = {radioPizza}
+                                    onClick={()=>setRadioPizza(!radioPizza)}
+                                >
+                                    {
+                                    !radioPizza
+                                    ?
+                                    <span>Put in cart</span>
+                                    :
+                                    <span>selected product</span>
+                                    }
+                                </Button>
+                            </Card.Body>
+                        </Card>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={salada} />
+                            <Card.Body>
+                                <Card.Title>Lorem ipsum dolor</Card.Title>
+                                <Card.Text>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ad, quibusdam, pariatur omnis illo reiciendis ab excepturi fuga ea quam aliquid quo nobis id neque recusandae nesciunt, aliquam autem sit?
+                                </Card.Text>
+                                <Button
+                                    variant="outline-primary"
+                                    active = {radioSalada}
+                                    onClick={()=>setRadioSalada(!radioSalada)}
+                                >
+                                    {
+                                    !radioSalada
+                                    ?
+                                    <span>Put in cart</span>
+                                    :
+                                    <span>selected product</span>
+                                    }
+                                </Button>
+                            </Card.Body>
+                        </Card>
+                        <Card style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={meat} />
+                            <Card.Body>
+                                <Card.Title>Lorem ipsum dolor</Card.Title>
+                                <Card.Text>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, maiores placeat facere doloribus officia fugit ut explicabo non ipsa consequatur, voluptates minus nulla asperiores, delectus cum et suscipit. Rem, facere!
+                                </Card.Text>
+                                <Button
+                                    variant="outline-primary"
+                                    active = {radioMeat}
+                                    onClick={()=>setRadioMeat(!radioMeat)}
+                                >
+                                    {
+                                    !radioMeat
+                                    ?
+                                    <span>Put in cart</span>
+                                    :
+                                    <span>selected product</span>
+                                    }
+                                </Button>
+                            </Card.Body>
+                        </Card>
                     </div>
-                </div>
-            </label>
-            <label htmlFor="menu2">
-                <div className='w-comida'>
-                    <img src={couvert} alt="" />
-                    <div className='info-comida'>
-                        <h1>
-                            Lorem ipsum
-                        </h1>
-                        <br />
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, pariatur eveniet accusamus facilis eaque amet accusantium mollitia perferendis! Molestiae ipsum sunt dicta tempore natus aliquam obcaecati, ullam temporibus eaque recusandae.
-                        </p>
-                    </div>
-                </div>
-            </label>
-            <label htmlFor="menu3">
-                <div className='w-comida'>
-                    <img src={bolinho} alt="" />
-                    <div className='info-comida'>
-                        <h1>
-                            Lorem ipsum
-                        </h1>
-                        <br />
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, pariatur eveniet accusamus facilis eaque amet accusantium mollitia perferendis! Molestiae ipsum sunt dicta tempore natus aliquam obcaecati, ullam temporibus eaque recusandae.
-                        </p>
-                    </div>
-                </div>
-            </label>
-            <label htmlFor="menu4">
-                <div className='w-comida'>
-                    <img src={macarrao} alt="" />
-                    <div className='info-comida'>
-                        <h1>
-                            Lorem ipsum
-                        </h1>
-                        <br />
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, pariatur eveniet accusamus facilis eaque amet accusantium mollitia perferendis! Molestiae ipsum sunt dicta tempore natus aliquam obcaecati, ullam temporibus eaque recusandae.
-                        </p>
-                    </div>
-                </div>
-            </label>
-            <label htmlFor="menu5">
-                <div className='w-comida'>
-                    <img src={mistura} alt="" />
-                    <div className='info-comida'>
-                        <h1>
-                            Lorem ipsum
-                        </h1>
-                        <br />
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, pariatur eveniet accusamus facilis eaque amet accusantium mollitia perferendis! Molestiae ipsum sunt dicta tempore natus aliquam obcaecati, ullam temporibus eaque recusandae.
-                        </p>
-                    </div>
-                </div>
-            </label>
-            <label htmlFor="menu6">
-                <div className='w-comida'>
-                    <img src={pizza} alt="" />
-                    <div className='info-comida'>
-                        <h1>
-                            Lorem ipsum
-                        </h1>
-                        <br />
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, pariatur eveniet accusamus facilis eaque amet accusantium mollitia perferendis! Molestiae ipsum sunt dicta tempore natus aliquam obcaecati, ullam temporibus eaque recusandae.
-                        </p>
-                    </div>
-                </div>
-            </label>
-            <label htmlFor="menu7">
-                <div className='w-comida'>
-                    <img src={salada} alt="" />
-                    <div className='info-comida'>
-                        <h1>
-                            Lorem ipsum
-                        </h1>
-                        <br />
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, pariatur eveniet accusamus facilis eaque amet accusantium mollitia perferendis! Molestiae ipsum sunt dicta tempore natus aliquam obcaecati, ullam temporibus eaque recusandae.
-                        </p>
-                    </div>
-                </div>
-            </label> */}
+
+                </Carousel.Item>
+
+            </Carousel>
+        
         </div>
     );
 }
