@@ -19,11 +19,10 @@ const Cart = () => {
   
         <Offcanvas show={show} onHide={handleClose}>
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+            <Offcanvas.Title>CART</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            Some text as placeholder. In real life you can have the elements you
-            have chosen. Like, text, images, lists, etc.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum odit accusamus illo vero sunt repudiandae voluptatibus temporibus, consectetur, necessitatibus nam ad? Earum numquam architecto totam voluptate voluptas recusandae necessitatibus soluta!
           </Offcanvas.Body>
         </Offcanvas>
       </>

@@ -8,9 +8,13 @@
 }
 body{
     overflow-x: hidden;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 .header{
     background-color: var(--color2);
+    color: white;
 }
 .Carousel-card{
     display: flex;
