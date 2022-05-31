@@ -31,8 +31,8 @@ const Foods = () => {
                 <Carousel.Item>
                     
                     <div className='Carousel-card'>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={massa} />
+                        <Card style={{ width: '18vw' }}>
+                            <Card.Img variant="top" src={massa} alt='Italian food photo'/>
                             <Card.Body>
                                 <Card.Title>Lorem ipsum dolor</Card.Title>
                                 <Card.Text>
@@ -53,8 +53,8 @@ const Foods = () => {
                                 </Button>
                             </Card.Body>
                         </Card>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={couvert} />
+                        <Card style={{ width: '18vw' }}>
+                            <Card.Img variant="top" src={couvert} alt='Couvert photo'/>
                             <Card.Body>
                                 <Card.Title>Lorem ipsum dolor</Card.Title>
                                 <Card.Text>
@@ -75,8 +75,8 @@ const Foods = () => {
                                 </Button>
                             </Card.Body>
                         </Card>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={bolinho} />
+                        <Card style={{ width: '18vw' }}>
+                            <Card.Img variant="top" src={bolinho} alt='Bolinho photo'/>
                             <Card.Body>
                                 <Card.Title>Lorem ipsum dolor</Card.Title>
                                 <Card.Text>
@@ -97,8 +97,8 @@ const Foods = () => {
                                 </Button>
                             </Card.Body>
                         </Card>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={macarrao} />
+                        <Card style={{ width: '18vw' }}>
+                            <Card.Img variant="top" src={macarrao} alt='Macarrao photo'/>
                             <Card.Body>
                                 <Card.Title>Lorem ipsum dolor</Card.Title>
                                 <Card.Text>
@@ -125,8 +125,8 @@ const Foods = () => {
                 <Carousel.Item >
 
                     <div className='Carousel-card'>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={mistura} />
+                        <Card style={{ width: '18vw' }}>
+                            <Card.Img variant="top" src={mistura} alt='Mistura photo'/>
                             <Card.Body>
                                 <Card.Title>Lorem ipsum dolor</Card.Title>
                                 <Card.Text>
@@ -147,8 +147,8 @@ const Foods = () => {
                                 </Button>
                             </Card.Body>
                         </Card>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={pizza} />
+                        <Card style={{ width: '18vw' }}>
+                            <Card.Img variant="top" src={pizza} alt='Pizza photo'/>
                             <Card.Body>
                                 <Card.Title>Lorem ipsum dolor</Card.Title>
                                 <Card.Text>
@@ -169,8 +169,8 @@ const Foods = () => {
                                 </Button>
                             </Card.Body>
                         </Card>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={salada} />
+                        <Card style={{ width: '18vw' }}>
+                            <Card.Img variant="top" src={salada} alt='Salad photo'/>
                             <Card.Body>
                                 <Card.Title>Lorem ipsum dolor</Card.Title>
                                 <Card.Text>
@@ -191,8 +191,8 @@ const Foods = () => {
                                 </Button>
                             </Card.Body>
                         </Card>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={meat} />
+                        <Card style={{ width: '18vw' }}>
+                            <Card.Img variant="top" src={meat} alt='Meat photo'/>
                             <Card.Body>
                                 <Card.Title>Lorem ipsum dolor</Card.Title>
                                 <Card.Text>
