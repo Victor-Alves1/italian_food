@@ -52,3 +52,27 @@ body{
     width: 100vw;
     z-index: 100;
 }
+.visibility-small-screen{
+    display: none;
+}
+@media(max-width:1250px){
+    .welcome-screen h1{
+        font-size: 3rem;
+    }
+}
+@media(max-width:910px){
+    .welcome-screen h1{
+        font-size: 2rem;
+    }
+    .visibility-large-screen{
+        display: none;
+    }
+    .visibility-small-screen{
+        display: contents;
+    }
+}
+@media(max-width:650px){
+    .welcome-screen h1{
+        font-size: 1.5rem;
+    }
+}
